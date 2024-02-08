@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NewGameForm() {
 
@@ -17,6 +18,9 @@ function NewGameForm() {
             <input type="text" id="tribe" name="tribe" />
             <button type="submit">Submit</button>
         </form>
+        <Link to="/">
+        <button className="back-to-home">Back to home</button>
+      </Link>
     </div>
   );
 }
