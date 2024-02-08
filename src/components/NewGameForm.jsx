@@ -23,6 +23,8 @@ function NewGameForm() {
               type="number"
               id="placement"
               name="placement"
+              min="1"
+              max="8"
               placeholder="Enter your placement..."
             />
           </div>
@@ -37,12 +39,18 @@ function NewGameForm() {
           </div>
           <div className="tribe-container">
             <label htmlFor="tribe">Tribe:</label>
-            <input
-              type="text"
-              id="tribe"
-              name="tribe"
-              placeholder="Enter your tribe..."
-            />
+            <select id="tribe" name="tribe">
+              <option value="Beasts">Beasts</option>
+              <option value="Demons">Demons</option>
+              <option value="Dragons">Dragons</option>
+              <option value="Elementals">Elementals</option>
+              <option value="Mechs">Mechs</option>
+              <option value="Murlocs">Murlocs</option>
+              <option value="Naga">Naga</option>
+              <option value="Pirates">Pirates</option>
+              <option value="Quilboar">Quilboar</option>
+              <option value="Undead">Undead</option>
+            </select>
           </div>
         </div>
         <div className="submit-btn-container">
