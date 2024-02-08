@@ -8,7 +8,7 @@ function NewGameForm() {
       <h1>New Game Form</h1>
       <form>
         <div className="label-input-container">
-          <div>
+          <div className="player-name-container">
             <label htmlFor="player-name">Player Name:</label>
             <input
               type="text"
@@ -17,16 +17,7 @@ function NewGameForm() {
               placeholder="Enter your name..."
             />
           </div>
-          <div>
-            <label htmlFor="hero">Hero:</label>
-            <input
-              type="text"
-              id="hero"
-              name="hero"
-              placeholder="Enter your hero..."
-            />
-          </div>
-          <div>
+          <div className="placement-container">
             <label htmlFor="placement">Placement:</label>
             <input
               type="number"
@@ -35,7 +26,16 @@ function NewGameForm() {
               placeholder="Enter your placement..."
             />
           </div>
-          <div>
+          <div className="hero-container">
+            <label htmlFor="hero">Hero:</label>
+            <input
+              type="text"
+              id="hero"
+              name="hero"
+              placeholder="Enter your hero..."
+            />
+          </div>
+          <div className="tribe-container">
             <label htmlFor="tribe">Tribe:</label>
             <input
               type="text"
