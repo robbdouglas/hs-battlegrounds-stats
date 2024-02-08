@@ -8,6 +8,7 @@ form {
 label {
   margin-bottom: 0.5rem;
   text-align: center;
+  font-weight: bold;
 }
 
 input {
@@ -29,5 +30,7 @@ button {
   margin: 30px;
 }
 
-
+select {
+  margin-left: 10px;
+}
 
