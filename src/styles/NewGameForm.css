@@ -1,12 +1,16 @@
 /* NewGameForm.css */
 
+body {
+  overflow: hidden;
+}
+
 form {
   display: flex;
   flex-direction: column;
 }
 
 label {
-  text-align: center;
+  align-self: center;
   font-weight: bold;
 }
 
@@ -15,6 +19,13 @@ input {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+}
+
+.input-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem;
 }
 
 button {
@@ -26,9 +37,14 @@ button {
   display: flex;
   flex-direction: column;
   margin: 30px;
+  padding: 20px;
+  /* border: 1px solid white; */
+}
+
+.player-name-container label {
+  text-align: left;
 }
 
 select {
-  margin-left: 10px;
+  margin: 1em;
 }
-

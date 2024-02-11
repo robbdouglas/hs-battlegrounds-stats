@@ -1,0 +1,8 @@
+.form-stats-container {
+  text-align: center;
+  border: 1px solid white;
+}
+
+.form-stats-container p {
+  font-weight: bold;
+}

@@ -1,9 +1,11 @@
 // NewGameForm.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/NewGameForm.css";
+import FormStatsContainer from "./FormStatsContainer";
 import { heroes } from "../data/heroes";
 import { tribes } from "../data/tribes";
+import "../styles/NewGameForm.css";
+import ArrowBtn from "./ArrowBtn";
 
 function NewGameForm() {
   const [filter, setFilter] = useState(""); // Zustand für den Filterwert
@@ -13,30 +15,40 @@ function NewGameForm() {
     hero.toLowerCase().includes(filter.toLowerCase())
   );
 
+  console.log("Number of heroes:", heroes.length);
+  console.log("heroes:", heroes);
+
   return (
     <div>
       <h1>New Game Form</h1>
       <form>
         <div className="label-input-container">
           <div className="player-name-container">
-            <label htmlFor="player-name">Player Name:</label>
-            <input
-              type="text"
-              id="player-name"
-              name="player-name"
-              placeholder="Enter your name..."
-            />
+            <div className="input-line">
+              <label htmlFor="player-name">Player:</label>
+              <input
+                type="text"
+                id="player-name"
+                name="player-name"
+                placeholder="Enter your name..."
+              />
+              <ArrowBtn />
+            </div>
           </div>
           <div className="placement-container">
-            <label htmlFor="placement">Placement:</label>
-            <input
-              type="number"
-              id="placement"
-              name="placement"
-              min="1"
-              max="8"
-              placeholder="Enter your placement..."
-            />
+            <div className="input-line">
+              <label htmlFor="placement">Placement:</label>
+
+              <input
+                type="number"
+                id="placement"
+                name="placement"
+                min="1"
+                max="8"
+                placeholder="Enter your placement..."
+              />
+              <ArrowBtn />
+            </div>
           </div>
           <div className="filter-container">
             <label htmlFor="hero-filter">Filter Heroes:</label>
@@ -74,6 +86,7 @@ function NewGameForm() {
           <button type="submit">Submit</button>
         </div>
       </form>
+      <FormStatsContainer />
       <Link to="/">
         <button className="back-to-home">Back to home</button>
       </Link>
