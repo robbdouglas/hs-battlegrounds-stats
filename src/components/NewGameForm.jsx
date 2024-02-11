@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/NewGameForm.css";
-import { heroes } from "../data/heroes"; 
-import { tribes } from "../data/tribes"; 
+import { heroes } from "../data/heroes";
+import { tribes } from "../data/tribes";
 
 function NewGameForm() {
   const [filter, setFilter] = useState(""); // Zustand für den Filterwert

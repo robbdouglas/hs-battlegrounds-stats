@@ -3,12 +3,15 @@
 export const heroes = [
     "A. F. Kay",
     "Al'akir",
-    "Ambassador Faelin",
     "Alexstrasza",
-    "Arrana Starseeker",
+    "Ambassador Faelin",
+    "Aranna Starseeker",
+    "Arch-Villain Rafaam",
     "Bru'kan",
     "C'Thun",
-    "Captain Hoggar",
+    "Cap'n Hoggar",
+    "Captain Eudora",
+    "Captain Hooktusk",
     "Cariel Roame",
     "Chenvaala",
     "Cookie the Cook",
@@ -17,7 +20,8 @@ export const heroes = [
     "Deathwing",
     "Dinotamer Brann",
     "Doc Hollidae",
-    "Dre"
+    "Drek'Thar",
+    
 
 ]
 
