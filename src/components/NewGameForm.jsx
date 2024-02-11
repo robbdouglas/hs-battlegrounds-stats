@@ -1,8 +1,18 @@
+// NewGameForm.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/NewGameForm.css";
+import { heroes } from "../data/heroes"; 
+import { tribes } from "../data/tribes"; 
 
 function NewGameForm() {
+  const [filter, setFilter] = useState(""); // Zustand für den Filterwert
+
+  // Filterfunktion für das Dropdown-Menü der Helden
+  const filteredHeroes = heroes.filter((hero) =>
+    hero.toLowerCase().includes(filter.toLowerCase())
+  );
+
   return (
     <div>
       <h1>New Game Form</h1>
@@ -28,28 +38,35 @@ function NewGameForm() {
               placeholder="Enter your placement..."
             />
           </div>
-          <div className="hero-container">
-            <label htmlFor="hero">Hero:</label>
+          <div className="filter-container">
+            <label htmlFor="hero-filter">Filter Heroes:</label>
             <input
               type="text"
-              id="hero"
-              name="hero"
-              placeholder="Enter your hero..."
+              id="hero-filter"
+              name="hero-filter"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              placeholder="Enter hero name..."
             />
+          </div>
+          <div className="hero-container">
+            <label htmlFor="hero">Hero:</label>
+            <select id="hero" name="hero">
+              {filteredHeroes.map((hero, index) => (
+                <option key={index} value={hero}>
+                  {hero}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="tribe-container">
             <label htmlFor="tribe">Tribe:</label>
             <select id="tribe" name="tribe">
-              <option value="Beasts">Beasts</option>
-              <option value="Demons">Demons</option>
-              <option value="Dragons">Dragons</option>
-              <option value="Elementals">Elementals</option>
-              <option value="Mechs">Mechs</option>
-              <option value="Murlocs">Murlocs</option>
-              <option value="Naga">Naga</option>
-              <option value="Pirates">Pirates</option>
-              <option value="Quilboar">Quilboar</option>
-              <option value="Undead">Undead</option>
+              {tribes.map((tribe, index) => (
+                <option key={index} value={tribe}>
+                  {tribe}
+                </option>
+              ))}
             </select>
           </div>
         </div>
