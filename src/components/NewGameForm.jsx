@@ -8,9 +8,9 @@ import "../styles/NewGameForm.css";
 import ArrowBtn from "./ArrowBtn";
 
 function NewGameForm() {
-  const [filter, setFilter] = useState(""); // Zustand für den Filterwert
+  const [filter, setFilter] = useState(""); 
 
-  // Filterfunktion für das Dropdown-Menü der Helden
+
   const filteredHeroes = heroes.filter((hero) =>
     hero.toLowerCase().includes(filter.toLowerCase())
   );
