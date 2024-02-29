@@ -22,3 +22,4 @@ const gamesSchema = new Schema({
 });
 
 export const Games = model("Game", gamesSchema);
+

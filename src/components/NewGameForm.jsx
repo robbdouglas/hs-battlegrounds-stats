@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import FormStatsContainer from "./FormStatsContainer";
 import { heroes } from "../data/heroes";
 import { tribes } from "../data/tribes";
+import { quests } from "../data/quests";
 import "../styles/NewGameForm.css";
 import ArrowBtn from "./ArrowBtn";
 
@@ -77,6 +78,16 @@ function NewGameForm() {
               {tribes.map((tribe, index) => (
                 <option key={index} value={tribe}>
                   {tribe}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="quest-container">
+            <label htmlFor="quest">Quest:</label>
+            <select id="quest" name="quest">
+              {quests.map((quest, index) => (
+                <option key={index} value={quest}>
+                  {quest}
                 </option>
               ))}
             </select>

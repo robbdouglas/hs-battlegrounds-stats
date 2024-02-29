@@ -8,6 +8,7 @@ function FormStatsContainer() {
       <p className="placement-input-value">Placement: </p>
       <p className="hero-input-value">Hero: </p>
       <p className="tribe-input-value">Tribe: </p>
+      <p className="quest-input-value">Quest: </p>
     </div>
   );
 }
